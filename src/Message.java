@@ -1,5 +1,4 @@
 
-
 import java.io.Serializable;
 
 public class Message implements Serializable {
@@ -13,7 +12,6 @@ public class Message implements Serializable {
     private String pEmisor = NO_EMISOR;
     private String pReceptor = null;
     private String pText = NO_TEXT;
-
 
     public String getAction() {
         return pAction;
@@ -55,8 +53,8 @@ public class Message implements Serializable {
 
     @Override
     public String toString() {
-        return "MSG[\n\tAction{"+pAction+"}\n\t"+"Emisor{"+pEmisor+"}\n\t"+"Receptor{"+pReceptor+"}\n\t"+"Text{"+pText+"}\n]";
+        return "MSG[\n\tAction{" + pAction + "}\n\t" + "Emisor{" + pEmisor + "}\n\t" + "Receptor{" + pReceptor + "}\n\t"
+                + "Text{" + pText + "}\n]";
     }
-    
 
 }
