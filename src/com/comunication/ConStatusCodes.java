@@ -1,4 +1,4 @@
-package com;
+package com.comunication;
 
 public interface ConStatusCodes {
 

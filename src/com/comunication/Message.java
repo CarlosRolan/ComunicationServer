@@ -1,5 +1,4 @@
-package com;
-
+package com.comunication;
 
 import java.io.Serializable;
 
@@ -7,13 +6,13 @@ public class Message implements Serializable {
 
     private static final long serialVersionUID = 123456789L;
 
-    private static final String NO_TEXT = "none";
-    private static final String NO_EMISOR = "SERVER";
+    public static final String NO_TEXT = "none";
+    public final static String NO_RECEPTOR = "SERVER";
 
     private String pAction = null;
-    private String pEmisor = NO_EMISOR;
-    private String pReceptor = null;
-    private String pText = NO_TEXT;
+    private String pEmisor = null;
+    private String pReceptor = NO_RECEPTOR;
+    private String pText = null;
 
 
     public String getAction() {
@@ -58,6 +57,10 @@ public class Message implements Serializable {
     public String toString() {
         return "MSG[\n\tAction{"+pAction+"}\n\t"+"Emisor{"+pEmisor+"}\n\t"+"Receptor{"+pReceptor+"}\n\t"+"Text{"+pText+"}\n]";
     }
-    
 
+    public String requestInfo() {
+        return "___"+pAction+"____\t" + ":" + "[" + pEmisor + "]"+ "=>"+"[" + pReceptor +"]";
+    }
+    
+    
 }
